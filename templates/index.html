@@ -1,0 +1,31 @@
+{% extends "model-page.html" %}
+
+{% block content %}
+
+<form action="buscar" method="POST">
+    <input type="text" name="pokemon" placeholder="Buscar pokemon">
+    <button type="submit" name="buscar">Buscar</button>
+</form>
+<br>
+<br>
+
+<div align="center">
+    <h3>{{nome}}</h3>
+    <table>
+        <tr>
+            <td>
+                <img src="{{foto}}" height="300" width="300">
+            </td>
+            <td>
+                <img src="{{foto2}}" height="300" width="300">
+            </td>
+        </tr>
+    </table>
+
+
+</div>
+
+
+<br>
+<br>
+{% endblock %}

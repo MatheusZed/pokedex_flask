@@ -5,6 +5,8 @@
 <form action="buscar" method="POST">
     <input type="text" name="pokemon" placeholder="Buscar pokemon">
     <button type="submit" name="buscar">Buscar</button>
+    <br>
+     <label><input type="checkbox" id="shiny" name="shiny">Shiny</label>
 </form>
 <br>
 <br>
@@ -21,11 +23,29 @@
             </td>
         </tr>
     </table>
-
-
+    <table>
+        <tr>
+            <th style="text-align:left;">TIPO:</th>
+            <td style="text-align:center;">{{tipo1}}</td>
+            {% if tipo2 != "" %}
+            <td>|</td>
+            <td style="text-align:center;">{{tipo2}}</td>
+            {% endif %}
+        </tr>
+        <tr>
+            <th style="text-align:left;">ALTURA:</th>
+            <td style="text-align:center;">{{altura}}</td>
+        </tr>
+        <tr>
+            <th style="text-align:left;">PESO:</th>
+            <td style="text-align:center;">{{peso}}</td>
+        </tr>
+    </table>
 </div>
-
-
+<hr>
+<label><b>Golpes:</b></label>
+<p>{{golpes}}</p>
+<hr>
 <br>
 <br>
 {% endblock %}
